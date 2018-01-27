@@ -2,6 +2,11 @@
   text-align: center;
   font-size: 50px;
   margin-bottom: 20px;
+
+  .responsive(480px, {
+    margin-bottom: 8px;
+  });
+
   .custom-icon {
     background: url("../img/cloud_icon.png") 50% 50% no-repeat;
     background-size: 50%;
@@ -19,6 +24,9 @@
   .icon-wrapper {
     margin-top: 60px;
     display: inline-block;
+    .responsive(480px, {
+      margin-top: 46px;
+    });
   }
 
   p {
@@ -28,7 +36,8 @@
     line-height: 0.9;
     .responsive(480px, {
       font-size: 22px;
-      line-height: 1.1;
+      margin-top: 10px;
+      line-height: 1.2;
     });
   }
 }
@@ -55,11 +64,14 @@
       padding: 18px;
       width: 18px;
       background-color: @background-primary-color;
+
       &-next {
-        right: 40%;
+        box-sizing: border-box;
+        right: 34%;
       }
       &-previous {
-        left: 30%;
+        box-sizing: border-box;
+        left: 34%;
       }
       .responsive(850px, {
         display: table-cell;
@@ -68,6 +80,7 @@
       i {
         position: relative;
         top: -15px;
+
 
         border: solid @section-header-icon-color;
         border-width: 0 3px 3px 0;
@@ -97,9 +110,14 @@
     width: 37%;
     .responsive(850px, {
       width: 100%;
+      margin-top: 0;
+      //border: red solid 1px;
     });
     &:first-child {
       margin-right: 25px;
+      .responsive(480px, {
+        margin-right: 0;
+      });
     }
     li:last-child {
       background: none;
@@ -107,6 +125,7 @@
         margin-top: 22px;
       }
       .responsive(850px, {
+        padding-bottom: 5px;
         background: url('../img/dotted.png') left bottom repeat-x;
       });
     }
@@ -115,6 +134,7 @@
       align-items: center;
       font-size: 17px;
       .responsive(480px, {
+       // border: red solid 1px;
         font-size: 15px;
       });
       line-height: 1.4em;

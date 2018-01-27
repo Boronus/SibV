@@ -57,6 +57,7 @@
   .main-footer-contacts {
     padding-left: 4.6em;
     width: 34%;
+    margin-top:10px;
     .responsive(480px, {
       margin:0;
       padding: 0;
@@ -112,13 +113,15 @@
   }
 
   .main-footer-contacts-requisites {
-    border-top: @main-footer-border-color solid 1px;
+    .responsive(480px, {
+      border-top: @main-footer-border-color solid 1px;
+    });
   }
 
   .main-footer-contacts-company {
     display: inline-block;
     line-height: 0;
-    margin: 1.2em 0 0 0;
+    margin: 1.2em 0 1.2em 0;
   }
 
   .main-footer-contacts-rights {
