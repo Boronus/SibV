@@ -1,0 +1,59 @@
+@import "variables.less";
+@import "fonts.less";
+@import "features-section.less";
+@import "coast-section.less";
+@import "capabilities-section.less";
+@import "income-section.less";
+@import "footer.less";
+@import "header.less";
+
+body {
+    margin:0;
+    padding:0;
+    font-family: @font-family-primary, sans-serif;
+    color: @text-primary-color;
+    h1 {
+        font-style: normal;
+        font-weight: @font-weight-light;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.full-content {
+    flex: 1 0 auto;
+}
+.main-footer {
+    flex: 0 0 auto;
+}
+
+.layout-positioner {
+    height: auto;
+    overflow: hidden;
+    max-width: 1140px;
+    margin: 0 auto;
+    .responsive(1170px, {
+        width: 96%;
+    });
+    .responsive(480px, {
+        width: 90.625%;
+    });
+}
+
+
+.emphasis {
+    color: @text-emphasis-color;
+}
+
+.emphasis-additional {
+    color: @text-emphasis-additional-color;
+    text-shadow: 0 0 5px @shadow-color;
+}

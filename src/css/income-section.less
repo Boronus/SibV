@@ -1,0 +1,124 @@
+.income .hgroup {
+  width: 75%;
+  margin-top: 90px;
+  .responsive(480px, {
+    width: 100%;
+    margin-top: 44px;
+  });
+  p {
+    margin: 1.37em 0 32px 2em;
+    font-size: 31.7px;
+    line-height: 1.46em;
+    .responsive(480px, {
+      font-size: 20px;
+      margin-left:0;
+      margin-bottom: 28px;
+      line-height: 1.8em;
+    });
+  }
+  span{
+    font-weight: @font-weight-semibold;
+  }
+}
+
+.income {
+  background-color: @section-background-additional-color;
+  border-bottom: @section-border-color solid 1px;
+  position: relative;
+  .income-layout-positioner-screen {
+    //position: relative;
+  }
+  ul {
+    border: @income-list-border-color 1px solid;
+    border-radius: @border-radius;
+    //position: absolute;
+    float: left;
+    //left: 0;
+    display: block;
+    margin: 37px 0 50px 65px;
+    padding: 49px 0 35px 43px;
+    width: 39%;
+    list-style-type: none;
+    overflow: hidden;
+    .responsive(1050px, {
+      margin-left: 30px;
+      width: 44%;
+    });
+    .responsive(480px, {
+      margin: 0 0 0 0;
+      padding: 25px 0 40px 0;
+      position: static;
+      width: 99%;
+    });
+  }
+  li {
+    padding-left: 2.3em;
+    font-size: 17px;
+    line-height: 2.3em;
+    .responsive(1180px, {
+      font-size: 1.4vw;
+    });
+    .responsive(480px, {
+      font-size: 15px;
+      //margin-left: 1em;
+      margin-bottom: 0.9em;
+      padding-left: 3.85em;
+      padding-right: 1em;
+      line-height: 1.5em;
+    });
+  }
+  li:before {
+    color: @check-icon-color;
+    content: "\f00c";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -2em;
+    width: 2em;
+    .responsive(480px, {
+      margin-left: -2.2em;
+      width: 2.2em;
+    });
+  }
+
+  .income-layout-positioner-list{
+    position: relative;
+    //border: red solid 1px;
+  }
+  .income-layout-positioner-screen{
+    .responsive(480px, {
+      position: relative;
+      width: 100%;
+      height: 227px;
+    //border: red solid 1px;
+      top:-30px;
+      //border: red solid 1px;
+    });
+  }
+  .screen {
+    margin-bottom: 67px;
+    position:absolute;
+    //top: -100px;
+    z-index: 100;
+    float: right;
+    display: block;
+    //border: red solid 1px;
+    background-image: url("../img/screen2.png");
+    background-size: auto 100%;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    width: 45%;
+    padding-bottom: 20%;
+    right: 200px;
+    top: 260px;
+    //width: 30%;
+    //padding-bottom: 16%;
+    .responsive(480px, {
+      margin-bottom: 15px;
+      right: 0;
+      top: 0;
+      width: 100%;
+      padding-bottom: 66%;
+      background-position: center;
+    });
+  }
+}

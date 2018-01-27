@@ -1,0 +1,17 @@
+.font-face(@family, @filename: @family, @weight: normal, @style: normal) {
+    @font-face{
+      font-family: @family;
+      src:url('../fonts/@{filename}.otf');
+      src:local('☺'),
+          url('../fonts/@{filename}.woff') format('woff'),
+          url('../fonts/@{filename}.ttf') format('truetype'),
+          url('../fonts/@{filename}.svg#@{filename}') format('svg');
+      font-weight: @weight;
+      font-style: @style;
+    }
+}
+
+.font-face('ProximaNova', 'ProximaNova-Bold', @font-weight-bold);
+.font-face('ProximaNova', 'ProximaNova-Regular', @font-weight-regular);
+.font-face('ProximaNova', 'ProximaNova-Light', @font-weight-light);
+.font-face('ProximaNova', 'ProximaNova-Semibold', @font-weight-semibold);

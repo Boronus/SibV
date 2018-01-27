@@ -1,0 +1,73 @@
+@font-family-primary: 'ProximaNova';
+@font-weight-bold: 700;
+@font-weight-light: 300;
+@font-weight-regular: 400;
+@font-weight-semibold: 600;
+
+@soft-gray: #5f6d7c;
+@more-soft-gray: #8b9197;
+@soft-gray-transparent: rgba(95,109,124,0.3);
+@soft-gray-more-transparent: rgba(95,109,124,0.1);
+@darker-gray: #7d8993;
+@blue-gray: #2c3e50;
+@dark-green: #4ab14a;
+@green: #63be63;
+@light-green: #c7fa90;
+@super-white-green: #edf7ed;
+@white-green: #c4e2c4;
+@black: #000000;
+@white: #ffffff;
+@almost-wight: #fbfbfb;
+@super-light: #f8fbfb;
+@orange: #fab700;
+
+@border-radius: 5px;
+@prices-border-radius: 3px;
+
+@shadow-color: @soft-gray-transparent;
+@line-through-color: @soft-gray-transparent;
+@soft-shadow-color: @soft-gray-more-transparent;
+
+@main-footer-background-color: @white-green;
+@button-main-background-color: @dark-green;
+
+@input-main-border-color: @green;
+@input-main-background-color: @white;
+@input-main-text-color: @soft-gray;
+
+@text-emphasis-color: @green;
+@text-emphasis-additional-color: @light-green;
+@text-primary-color: @blue-gray;
+@text-secondary-color: @black;
+@text-additional-color: @soft-gray;
+@text-additional-light-color: @more-soft-gray;
+@text-contrast-color: @white;
+
+@main-header-background-color: @super-white-green;
+@main-header-border-color: @super-white-green;
+@section-border-color: @super-white-green;
+
+@background-primary-color: @white;
+@background-secondary-color: @green;
+@section-background-additional-color: @almost-wight;
+
+@check-icon-color: @green;
+@section-header-icon-color: @soft-gray-transparent;
+
+@ingegrations-border-color: @soft-gray-transparent;
+@income-list-border-color: @soft-gray-transparent;
+@soon-icon-background-color: @orange;
+@soon-icon-text-color: @white;
+
+@prices-border-color: @soft-gray-transparent;
+@prices-background-color: @super-light;
+@coast-bottom-background-color: @green;
+
+@main-footer-border-color: @soft-gray-transparent;
+
+.responsive(@maxWidth; @rules) {
+  @media only screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}
+

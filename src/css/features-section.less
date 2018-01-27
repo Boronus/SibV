@@ -1,0 +1,258 @@
+.features-header {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  .custom-icon {
+    background: url("../img/cloud_icon.png") 50% 50% no-repeat;
+    background-size: 50%;
+    border-radius: 100%;
+    border: 2px solid @section-header-icon-color;
+    //color: white;
+    display: table-cell;
+    height: 20px;
+    padding: 20px;
+    width: 20px;
+  }
+  .fix-editor {
+    display: none;
+  }
+  .icon-wrapper {
+    margin-top: 60px;
+    display: inline-block;
+  }
+
+  p {
+    margin:0;
+    font-weight: @font-weight-regular;
+    font-size: 39.5px;
+    line-height: 0.9;
+    .responsive(480px, {
+      font-size: 22px;
+      line-height: 1.1;
+    });
+  }
+}
+
+.features {
+  border-bottom: @section-border-color solid 1px;
+  .features-list {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    .features-list-column-right {
+      .responsive(850px, {
+        display: none;
+      });
+    }
+    .features-list-button {
+      display: none;
+      position: absolute;
+      bottom: -20px;
+      background-size: 50%;
+      border-radius: 100%;
+      border: 2px solid @section-header-icon-color;
+      height: 18px;
+      padding: 18px;
+      width: 18px;
+      background-color: @background-primary-color;
+      &-next {
+        right: 40%;
+      }
+      &-previous {
+        left: 30%;
+      }
+      .responsive(850px, {
+        display: table-cell;
+      });
+      font-size: 25px;
+      i {
+        position: relative;
+        top: -15px;
+
+        border: solid @section-header-icon-color;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+      }
+
+      .right {
+         transform: rotate(-45deg);
+         right: 8px;
+       }
+      .left {
+        transform: rotate(135deg);
+        right: 6px;
+      }
+      .arrow {
+
+      }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 12px 0px 0 0px;
+    padding: 0;
+    overflow: hidden;
+    width: 37%;
+    .responsive(850px, {
+      width: 100%;
+    });
+    &:first-child {
+      margin-right: 25px;
+    }
+    li:last-child {
+      background: none;
+      .icon {
+        margin-top: 22px;
+      }
+      .responsive(850px, {
+        background: url('../img/dotted.png') left bottom repeat-x;
+      });
+    }
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      .responsive(480px, {
+        font-size: 15px;
+      });
+      line-height: 1.4em;
+      background: url('../img/dotted.png') left bottom repeat-x;
+    }
+  }
+  .icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: 26px 25px 26px 0;
+    background-repeat: no-repeat;
+  }
+  .icon--development_icon{ background-image: url("../img/features_icons/development_icon.png"); }
+  .icon--team_icon { background-image: url("../img/features_icons/team_icon.png"); }
+  .icon--note_icon { background-image: url("../img/features_icons/note_icon.png"); }
+  .icon--calendar_icon { background-image: url("../img/features_icons/calendar_icon.png"); }
+  .icon--cloud_icon_full { background-image: url("../img/features_icons/cloud_icon_full.png"); }
+  .icon--networking_icon { background-image: url("../img/features_icons/networking_icon.png"); }
+  .icon--analytics_icon_full { background-image: url("../img/features_icons/analytics_icon_full.png"); }
+  .icon--folders_icon { background-image: url("../img/features_icons/folders_icon.png"); }
+  .icon--export_icon { background-image: url("../img/features_icons/export_icon.png"); }
+  .icon--server_icon { background-image: url("../img/features_icons/server_icon.png"); }
+
+  .integrations-list {
+    display: flex;
+    border: @ingegrations-border-color solid 1px;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 88%;
+    margin-top: 30px;
+    margin-bottom: 68px;
+    .responsive(850px, {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      //width: 100%;
+    });
+    .responsive(480px, {
+      margin-top: 62px;
+      width: 99%;
+      margin-bottom: 57px;
+    });
+  }
+  .integration-block {
+    position: relative;
+    width: 25.5%;
+    text-align: center;
+    font-size: 17px;
+    //border: red solid 1px;
+    .responsive(850px, {
+      width: 100%;
+      //border: red solid 1px;
+      //margin: 0;
+    });
+    &-with {
+      margin: auto 5.5% auto 0.4%;
+      .responsive(480px, {
+        margin: 8px 0 0 0;
+      });
+      p {
+        font-size: 28px;
+        .responsive(480px, {
+          font-size: 20px;
+          //margin: 0;
+        });
+      }
+    }
+    &-logo {
+      display: inline-block;
+      background: no-repeat;
+    }
+    &-amocrm {
+      p{
+        margin-top: 0.8em;
+        .responsive(480px, {
+          margin-top: 0px;
+          font-size: 15px;
+          line-height: 1em;
+        });
+      }
+    }
+    &-webasyst {
+      p{
+        margin-top: 0.7em;
+        .responsive(480px, {
+          margin-top: 0px;
+          font-size: 15px;
+          line-height: 0.3em;
+          margin-bottom: 20px;
+        });
+      }
+    }
+    &-amocrm-logo {
+      //border: red solid 1px;
+      //height: 8.3em;
+      margin-top: 2.3em;
+      .responsive(480px, {
+        margin-top: 10px;
+        width: 150px;
+      });
+      padding-bottom: 13%;
+      width: 170px;
+      background-image: url("../img/amocrm_logo.png");
+      //background-position: 49px 37px;
+      background-size: 100%;
+    }
+    &-webasyst-logo {
+      //border: red solid 1px;
+      margin-top: 2.5em;
+      //margin-bottom: 0em;
+      padding-bottom: 12.4%;
+      width: 155px;
+      background-image: url("../img/webasyst_logo.png");
+      //background-position: 52px 40px;
+      background-size: 100%;
+      .responsive(480px, {
+        margin-top: 57px;
+        width: 135px;
+      });
+    }
+    &-webasyst::after {
+      color: @soon-icon-text-color;
+      font-size: 15px;
+      padding: 0.3em 0.6em;
+      position: relative;
+      bottom: 2.5em;
+      left: 8.7em;
+      content: 'Скоро';
+      background: @soon-icon-background-color;
+      border-radius: 1em;
+      .responsive(480px, {
+        bottom: 6em;
+        left: 3em;
+      });
+    }
+  }
+}

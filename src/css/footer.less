@@ -1,0 +1,130 @@
+.main-footer .layout-positioner {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  align-items: center;
+  .responsive(480px, {
+    flex-flow: wrap;
+    width: 100%;
+    //border: red solid 1px;
+  });
+  font-size: 14px;
+  .responsive(480px, {
+    font-size: 13px;
+  });
+  span {
+    font-weight: @font-weight-bold;
+  }
+  .vertical-logo {
+    display: inline-block;
+    margin-top: 54px;
+    margin-bottom: 45px;
+    background: url("../img/vertical_logo.png") 100% no-repeat;
+    height: 87px;
+    width: 110px;
+    background-size: 100%;
+    .responsive(480px, {
+      height: 77px;
+      width: 86px;
+      margin-left: 22px;
+      margin-bottom: 60px;
+    });
+  }
+  .main-footer-links {
+    margin-right: 15px;
+    padding-top: 7px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    .responsive(480px, {
+      width: 155px;
+      margin-right: 18px;
+    });
+    .main-footer-link {
+      width: 195px;
+      padding: 5px 0 5px 0;
+      &-contract {order:2;}
+      &-help {order:5;}
+      &-about {order:1;}
+      &-blog {order:3;}
+      &-partners {order:4;}
+      .responsive(480px, {
+        order: 0;
+        padding: 6px 0 6px 0;
+      });
+    }
+  }
+  .main-footer-contacts {
+    padding-left: 4.6em;
+    width: 34%;
+    .responsive(480px, {
+      margin:0;
+      padding: 0;
+      width: 100%;
+    });
+    p {
+      line-height: 0.5em;
+      .responsive(480px, {
+        width: 35%;
+       //border: red solid 1px;
+        line-height: 1.5em;
+        margin-left: 15px;
+      });
+    }
+  }
+  .main-footer-socials-title {
+    display:inline-block;
+    margin: 1em 0;
+    .responsive(480px, {
+      //width: 150px;
+      //border: red solid 1px;
+      margin-top: 0.5em;
+
+      float: left;
+    });
+  }
+  .main-footer-socials {
+    //border: red solid 1px;
+    display:inline-block;
+    float:right;
+    .responsive(480px, {
+      margin-top: 0.7em;
+      float: right;
+      margin-right: 10px;
+
+    });
+    .icon-wrapper {
+      display: inline-block;
+      margin-left: 6px;
+      //border: red solid 1px;
+    }
+  }
+  .icon-wrapper:first-child {
+    margin-left: 0;
+  }
+  .main-footer-contacts-requisites-title {
+    margin-top: 0.9em;
+    margin-bottom:0;
+    .responsive(480px, {
+      visibility: hidden;
+      margin-bottom: 0.5em;
+    });
+  }
+
+  .main-footer-contacts-requisites {
+    border-top: @main-footer-border-color solid 1px;
+  }
+
+  .main-footer-contacts-company {
+    display: inline-block;
+    line-height: 0;
+    margin: 1.2em 0 0 0;
+  }
+
+  .main-footer-contacts-rights {
+    line-height: 0;
+    margin: 1.2em 0 0 0;
+    display: inline-block;
+    float: right;
+  }
+}

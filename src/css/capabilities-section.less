@@ -1,0 +1,111 @@
+.capabilities-header {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 40px;
+  .responsive(850px, {
+    margin-bottom: 23px;
+  });
+  .custom-icon {
+    background: url("../img/statistic_icon.png") 50% 50% no-repeat;
+    background-size: 50%;
+    border-radius: 100%;
+    border: 2px solid @section-header-icon-color;
+    color: white;
+    display: table-cell;
+    height: 20px;
+    padding: 20px;
+    width: 20px;
+  }
+  .fix-editor {
+    display: none;
+  }
+  .icon-wrapper {
+    margin-top: 57px;
+    display: inline-block;
+    .responsive(850px, {
+      margin-top: 45px;
+    });
+  }
+
+  p {
+    font-weight: @font-weight-regular;
+    margin:0 47px 0 0;
+    font-size: 32px;
+    .responsive(850px, {
+      font-size: 20px;
+      margin: 0;
+      line-height: 1.6em;
+    });
+  }
+  .emphasis {
+    .responsive(850px, {
+      font-size: 22px;
+    });
+  }
+}
+
+.capabilities .layout-positioner{
+  position: relative;
+}
+
+.capabilities .screen {
+  position: absolute;
+  display: inline-block;
+  background-image: url("../img/screen1.png");
+  background-size: auto 100%;
+  background-position: -30px;
+  background-repeat: no-repeat;
+  padding-bottom: 33.5%;
+  width: 57%;
+  .responsive(850px, {
+    position: static;
+    width: 100%;
+    padding-bottom: 58.2%;
+    background-position: center;
+  });
+}
+
+.capabilities {
+  border-bottom: @section-border-color solid 1px;
+  background-color: @section-background-additional-color;
+}
+.capabilities .layout-positioner {
+  ul {
+    list-style-type: none;
+    float: right;
+    display: inline-block;
+    margin: 5px 0 88px 0;
+    width: 40.75%;
+    .responsive(850px, {
+      width: 100%;
+      //margin-left: 20%;
+    });
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    padding-left: 2em;
+    line-height: 2.3em;
+    .responsive(1180px, {
+      font-size: 1.4vw;
+    });
+    .responsive(850px, {
+      font-size: 23px;
+    });
+    .responsive(480px, {
+      font-size: 15px;
+      line-height: 1.5em;
+      margin-bottom: 14px;
+    });
+  }
+  li:before {
+    color: @check-icon-color;
+
+    content: "\f00c";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -2em;
+    width: 2em;
+  }
+}
