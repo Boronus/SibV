@@ -31,14 +31,14 @@
     font-weight: @font-weight-regular;
     margin:0 47px 0 0;
     font-size: 32px;
-    .responsive(850px, {
+    .responsive(640px, {
       font-size: 20px;
       margin: 0;
       line-height: 1.6em;
     });
   }
   .emphasis {
-    .responsive(850px, {
+    .responsive(640px, {
       font-size: 22px;
     });
   }
@@ -66,10 +66,12 @@
   padding-bottom: 383px;
   top: 257px;
   width: 700px;
-  //right: 200px;
   bottom: 260px;
-  //border: red solid 1px;
   float: left;
+  .responsiveMiddle(1100px,850px, {
+    width: 65%;
+    padding-bottom: 35%;
+  });
   .responsive(850px, {
     margin-bottom: 35px;
     right: 0;
@@ -95,7 +97,6 @@
     .responsive(850px, {
       width: 100%;
       margin-bottom: 24px;
-      //margin-left: 20%;
     });
   }
   li {
@@ -110,7 +111,7 @@
     .responsive(850px, {
       font-size: 23px;
     });
-    .responsive(480px, {
+    .responsive(640px, {
       font-size: 15px;
       line-height: 1.5em;
       margin-bottom: 14px;

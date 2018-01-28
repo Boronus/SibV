@@ -12,7 +12,6 @@
     background-size: 50%;
     border-radius: 100%;
     border: 2px solid @section-header-icon-color;
-    //color: white;
     display: table-cell;
     height: 20px;
     padding: 20px;
@@ -111,11 +110,10 @@
     .responsive(850px, {
       width: 100%;
       margin-top: 0;
-      //border: red solid 1px;
     });
     &:first-child {
       margin-right: 25px;
-      .responsive(480px, {
+      .responsive(640px, {
         margin-right: 0;
       });
     }
@@ -133,8 +131,7 @@
       display: flex;
       align-items: center;
       font-size: 17px;
-      .responsive(480px, {
-       // border: red solid 1px;
+      .responsive(640px, {
         font-size: 15px;
       });
       line-height: 1.4em;
@@ -174,11 +171,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      //width: 100%;
     });
-    .responsive(480px, {
+    .responsive(640px, {
       margin-top: 62px;
-      width: 99%;
+      box-sizing: border-box;
+      width: 100%;
       margin-bottom: 57px;
     });
   }
@@ -187,28 +184,27 @@
     width: 25.5%;
     text-align: center;
     font-size: 17px;
-    //border: red solid 1px;
     .responsive(850px, {
       width: 100%;
-      //border: red solid 1px;
-      //margin: 0;
     });
     &-with {
       margin: auto 5.5% auto 0.4%;
-      .responsive(480px, {
+      .responsive(640px, {
         margin: 8px 0 0 0;
       });
       p {
         font-size: 28px;
-        .responsive(480px, {
+        .responsive(640px, {
           font-size: 20px;
-          //margin: 0;
         });
       }
     }
     &-logo {
       display: inline-block;
       background: no-repeat;
+      .responsive(640px, {
+        margin-left: 15px;
+      });
     }
     &-amocrm {
       p{
@@ -216,46 +212,42 @@
         .responsive(480px, {
           margin-top: 0px;
           font-size: 15px;
-          line-height: 1em;
+          line-height: 1.6em;
         });
       }
     }
     &-webasyst {
+      position: relative;
       p{
         margin-top: 0.7em;
-        .responsive(480px, {
+        margin-bottom: 0.7em;
+        .responsive(640px, {
           margin-top: 0px;
           font-size: 15px;
-          line-height: 0.3em;
-          margin-bottom: 20px;
+          line-height: 0.8em;
+          margin-bottom: 16px;
         });
       }
     }
     &-amocrm-logo {
-      //border: red solid 1px;
-      //height: 8.3em;
-      margin-top: 2.3em;
-      .responsive(480px, {
+      margin-top: 2.2em;
+      .responsive(640px, {
         margin-top: 10px;
         width: 150px;
       });
-      padding-bottom: 13%;
       width: 170px;
+      height: 32px;
       background-image: url("../img/amocrm_logo.png");
-      //background-position: 49px 37px;
       background-size: 100%;
     }
     &-webasyst-logo {
-      //border: red solid 1px;
-      margin-top: 2.5em;
-      //margin-bottom: 0em;
-      padding-bottom: 12.4%;
+      margin-top: 2.3em;
       width: 155px;
+      height: 32px;
       background-image: url("../img/webasyst_logo.png");
-      //background-position: 52px 40px;
       background-size: 100%;
-      .responsive(480px, {
-        margin-top: 57px;
+      .responsive(640px, {
+        margin-top: 52px;
         width: 135px;
       });
     }
@@ -264,13 +256,13 @@
       font-size: 15px;
       padding: 0.3em 0.6em;
       position: relative;
-      bottom: 2.5em;
+      bottom: 2.2em;
       left: 8.7em;
       content: 'Скоро';
       background: @soon-icon-background-color;
       border-radius: 1em;
-      .responsive(480px, {
-        bottom: 6em;
+      .responsive(640px, {
+        bottom: 6.2em;
         left: 3em;
       });
     }

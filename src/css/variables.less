@@ -71,3 +71,8 @@
   }
 }
 
+.responsiveMiddle(@maxWidth; @minWidth; @rules) {
+  @media only screen and (max-width: @maxWidth)  and (min-width: @minWidth) {
+    @rules();
+  }
+}

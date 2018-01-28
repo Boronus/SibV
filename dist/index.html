@@ -12,15 +12,42 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="external-wrapper" id="external_wrapper"></div>
+        <div id='external_register' class="external-block">
+            <div class="external-form-close" id="external_form_close_register"></div>
+            <form class="external-form external-form-register">
+                <p class="external-form-title">Регистрация</p>
+                <input class="external-form-input external-form-input-email" type="email" placeholder="Адрес электронной почты">
+                <input class="external-form-input external-form-input-password" type="password" placeholder="Пароль">
+                <div class="checkbox-wrapper">
+                    <input class="external-form-input-checkbox" type="checkbox" id="external_form_checkbox" name="agree" value="agree" hidden >
+                    <label for="external_form_checkbox">Согласен с <a>договором оферты</a></label>
+                </div>
+                <input class="external-form-input external-form-input-submit" type="submit" value="Зарегистрироваться">
+            </form>
+        </div>
+
+
+        <div id='external_signin' class="external-block">
+            <div class="external-form-close"  id="external_form_close_signin"></div>
+            <form class="external-form external-form-signin">
+                <p class="external-form-title">Вход</p>
+                <input class="external-form-input external-form-input-email" type="email" placeholder="Адрес электронной почты">
+                <input class="external-form-input external-form-input-password" type="password" placeholder="Пароль">
+                <input class="external-form-input external-form-input-submit" type="submit" value="Войти">
+                <a class="external-form-restore">Восстановить пароль</a>
+            </form>
+         </div>
+
         <div class="full-content">
             <header class="main-header">
                 <div class="layout-positioner">
                     <div class="main-header-top">
-                        <button class="main-header-nav-smallscreen-button">
+                        <button id='main_header_nav_smallscreen_button' class="main-header-nav-smallscreen-button">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </button>
                         <div class = "main-header-logo"></div>
-                        <nav class="main-header-nav">
+                        <nav id='main_header_nav' class="main-header-nav">
                             <ul>
                                 <li><a href="">Главная</a></li>
                                 <li><a href="">Возможности</a></li>
@@ -29,10 +56,10 @@
                             </ul>
                         </nav>
                         <form class="main-header-top-form">
-                            <input class="main-header-top-button main-header-top-button-enter" type="button" value="Вход">
-                            <input class="main-header-top-button main-header-top-button-register" type="button" value="Регистрация">
+                            <input id="main_header_top_button_signin"  class="main-header-top-button main-header-top-button-signin" type="button" value="Вход">
+                            <input id="main_header_top_button_register" class="main-header-top-button main-header-top-button-register" type="button" value="Регистрация">
                         </form>
-                        <button class="main-header-form-smallscreen-button"></button>
+                        <button id='main_header_form_smallscreen_button' class="main-header-form-smallscreen-button"></button>
                     </div>
                     <div class="hgroup">
                         <p> <span class="emphasis">Управленческий учет онлайн - </span>
@@ -42,11 +69,11 @@
                     </div>
                     <div class="main-header-bottom">
                         <div class="main-header-bottom-left">
-                            <a class="main-header-bottom-capabilities-smallscreen">
+                            <a id='main_header_bottom_capabilities_smallscreen' class="main-header-bottom-capabilities-smallscreen">
                                 <span>Основные возможности</span>
                                 <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
                             </a>
-                            <ul class="main-header-bottom-capabilities">
+                            <ul id="main_header_bottom_capabilities" class="main-header-bottom-capabilities">
                                 <li>Учет доходов и расходов</li>
                                 <li>Бюджетирование и планирование</li>
                                 <li>Выставление счетов</li>
@@ -68,7 +95,7 @@
                                 <input class="main-header-bottom-input main-header-bottom-input-submit" type="submit" value="Зарегистрироваться">
                             </form>
                             <form class="main-header-bottom-form-lite">
-                                <button class="main-header-bottom-lite-button" >Попробуйте <span>30 дней</span> бесплатно</button>
+                                <button id='main_header_bottom_lite_button' class="main-header-bottom-lite-button" >Попробуйте <span>30 дней</span> бесплатно</button>
                             </form>
                         </div>
                     </div>
@@ -121,22 +148,22 @@
                         <p>Дополнительные возможности</p>
                     </header>
                     <div class="features-list">
-                        <ul class="features-list-column features-list-column-left">
+                        <ul id='features_list_column_left' class="features-list-column features-list-column-left">
                             <li><div class="icon icon--development_icon"></div>Планирование расходов и доходов</li>
                             <li><div class="icon icon--team_icon"></div>Ведение базы клиентов</li>
                             <li><div class="icon icon--note_icon"></div>Выставление счетов и закрывающих документов</li>
                             <li><div class="icon icon--calendar_icon"></div>Импорт банковских выписок и ваших управленческих таблиц</li>
                             <li><div class="icon icon--cloud_icon_full"></div>Работает в облаке</li>
                         </ul>
-                        <ul class="features-list-column features-list-column-right">
+                        <ul id='features_list_column_right' class="features-list-column features-list-column-right">
                             <li><div class="icon icon--networking_icon"></div>Многопользовательский доступ</li>
                             <li><div class="icon icon--analytics_icon_full"></div>История изменения записей</li>
                             <li><div class="icon icon--folders_icon"></div>Не ограниченное количество проектов</li>
                             <li><div class="icon icon--export_icon"></div>Экспорт ваших записей</li>
                             <li><div class="icon icon--server_icon"></div>Резервное копирование</li>
                         </ul>
-                        <button class="features-list-button features-list-button-previous"><i class="arrow left"></i></button>
-                        <button class="features-list-button features-list-button-next"><i class="arrow right"></i></button>
+                        <button id='features_list_button_previous' class="features-list-button features-list-button-previous"><i class="arrow left"></i></button>
+                        <button id='features_list_button_next' class="features-list-button features-list-button-next"><i class="arrow right"></i></button>
                     </div>
                     <div class="integrations-list">
                         <div class="integration-block integration-block-with"><p>Интеграция с</p></div>
@@ -152,14 +179,14 @@
                 </div>
             </section>
             <section class="income">
-                <div class="layout-positioner income-layout-positioner-list">
+                <div class="layout-positioner">
                     <div class="hgroup">
                         <p>Заносите <span>доходы и расходы</span>, все отчеты система
                         сформирует автоматически и покажет <span>на графиках и таблицах</span>
                         важнейшие <span class="emphasis">показатели вашего бизнеса</span></p>
                     </div>
                 </div>
-                <div class="layout-positioner" >
+                <div class="layout-positioner income-layout-positioner-list" >
                     <ul>
                         <li>Сколько денег приносит бизнес</li>
                         <li>Куда уходят деньги</li>

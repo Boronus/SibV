@@ -21,6 +21,7 @@ body {
 html,
 body {
     height: 100%;
+    min-width: 320px;
 }
 
 .wrapper {
@@ -43,7 +44,7 @@ body {
     .responsive(1170px, {
         width: 96%;
     });
-    .responsive(480px, {
+    .responsive(640px, {
         width: 90.625%;
     });
 }
@@ -56,4 +57,156 @@ body {
 .emphasis-additional {
     color: @text-emphasis-additional-color;
     text-shadow: 0 0 5px @shadow-color;
+}
+
+.external-wrapper {
+    display: none;
+    opacity: 0.8;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1500;
+    background-color: rgba(1,1,1,0.7);
+}
+
+.external-block {
+    display: none;
+    position:fixed;
+    z-index: 2000;
+    text-align: center;
+    border: none;
+    background: @background-primary-color;
+    box-shadow: 0 0 50px @shadow-color;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    margin: auto;
+    width: 560px;
+    height: 410px;
+    .responsive(570px, {
+        width: auto;
+    });
+}
+
+.external-form {
+    margin: 55px auto 0 auto;
+    width: 66%;
+    position: relative;
+    text-align: left;
+    .responsive(500px, {
+        width: 90%;
+        text-align: center;
+    });
+    &-close::before{
+        position: absolute;
+        content: "\f00d";
+        font-size: 22px;
+        font-family: FontAwesome;
+        display: inline-block;
+        right: 0;
+        color:  @main-footer-border-color;
+        margin: 16px 16px 0 0;
+    }
+    &-title {
+        text-align: center;
+        margin: 0 0 35px 0 ;
+        font-size: 32px;
+        font-weight: @font-weight-semibold;
+    }
+    &-input {
+        color: @input-main-text-color;
+        font-family: @font-family-primary;
+        padding: 11px 40px;
+        display: block;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+        font-size:15px;
+        border: @input-main-border-color solid 1px;
+        border-radius: @border-radius;
+        background-color: transparent;
+        &-checkbox {
+            display: block;
+            margin-left: 0;
+        }
+        &-email {
+            background: url("../img/envelope_icon.png") no-repeat scroll 12px 14px;
+            background-size: 17px;
+            margin-bottom: 5.5%;
+        }
+        &-password {
+            background: url("../img/key_icon.png") no-repeat scroll 12px 11px;;
+            background-size: 15px;
+            border-color: @main-footer-border-color;
+            margin-bottom: 6.5%;
+        }
+        &-submit {
+            padding: 10px 11px;
+            background-color: @input-main-border-color;
+            color:@input-main-background-color;
+            margin-bottom: 7%;
+        }
+    }
+}
+
+.external-form-register .external-form-input-submit {
+    width: 55%;
+}
+.external-form-signin {
+    .external-form-input-submit {
+        width: 45%;
+        margin-left: 0;
+        margin-top: 7px;
+        display: inline-block;
+    }
+    .external-form-restore {
+        font-size: 15px;
+        color: @text-emphasis-color;
+        margin-left: 25px;
+        display: inline-block;
+        .responsive(500px, {
+            margin-left: 50px;
+            margin-right: 50px;
+        });
+    }
+}
+.checkbox-wrapper{
+    margin-bottom: 29px;
+}
+
+.external-form {
+    a {
+        text-decoration: underline;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"] + label {
+        font-size: 15px;
+        color: @input-main-text-color;
+        cursor: pointer;
+    }
+    input[type="checkbox"] + label::before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 20px;
+        display: inline-block;
+        border-radius: @border-radius;
+        color: @check-icon-color;
+
+        height: 20px;
+        width: 20px;
+        border: @main-footer-border-color solid 1px;
+        margin: 0 18px 0 0;
+        background-repeat: no-repeat;
+    }
+    input[type="checkbox"] + label::before {
+        color: transparent;
+    }
+    input[type="checkbox"]:checked + label::before {
+        color: @check-icon-color;
+    }
 }
